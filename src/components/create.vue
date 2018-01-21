@@ -27,7 +27,6 @@
 
 <script>
 export default {
-
   data () {
     return {
       message: [{username:'', short_desc:'', desc:''}]

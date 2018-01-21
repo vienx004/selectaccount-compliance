@@ -2,13 +2,13 @@
   <div id="app">
     <div>
       <b-navbar sticky-top variant="light">
-      <b-navbar-brand class="navbar-brand" href='#'><img style="height:50%;width:50%;" src="/src/assets/selectaccount-text.png"></b-navbar-brand>
+      <b-navbar-brand class="navbar-brand"><router-link to="/"><img style="height:50%;width:50%;" src="/src/assets/selectaccount-text.png"></router-link></b-navbar-brand>
 
         <b-navbar-nav>
           <span>
-            <b-nav-item href="/create">Create</b-nav-item>
-            <b-nav-item href="/track">Track</b-nav-item>
-            <b-nav-item href="/knowledge">Knowledge</b-nav-item>
+            <b-nav-item><router-link class="nav-pills" tag="li" to="/create" exact>Create</router-link></b-nav-item>
+            <b-nav-item><router-link class="nav-pills" tag="li" to="/track" exact>Track</router-link></b-nav-item>
+            <b-nav-item><router-link class="nav-pills" tag="li" to="/Knowledge" exact>Knowledge</router-link></b-nav-item>
           </span>
         </b-navbar-nav>
     
@@ -18,24 +18,20 @@
       <img style="height:45%;width:45%" src="/src/assets/select-account-logo.png">
     <hr>
     </header>
-
+<router-view>
   <create-component></create-component>
+</router-view>
 
   </div>
 </template>
 
 <script>
-import CreateComponent from './components/create.vue'
-
 export default {
   name: 'app',
   data () {
     return {
       message: [{username:'', short_desc:'', desc:''}]
     }
-  },
-  components: {
-    CreateComponent
   }
 }
 </script>
@@ -94,7 +90,8 @@ label {
   padding-bottom: 1%;
 }
 
-b-nav-item {
-  color : white;
+.nav-pills {
+  color: #53ad3c;
 }
+
 </style>
