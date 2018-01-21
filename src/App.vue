@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <b-navbar sticky-top variant="light">
-      <b-navbar-brand class="navbar-brand"><router-link to="/"><img style="height:50%;width:50%;" src="/src/assets/selectaccount-text.png"></router-link></b-navbar-brand>
+      <b-navbar-brand class="navbar-brand"><router-link to="/"><img style="height:40%;width:40%;" src="/src/assets/selectaccount-text.png"></router-link></b-navbar-brand>
 
         <b-navbar-nav>
           <span>
@@ -15,7 +15,7 @@
     </b-navbar>
     </div>
     <header>
-      <img style="height:45%;width:45%" src="/src/assets/select-account-logo.png">
+      <img style="height:30%;width:30%" src="/src/assets/select-account-logo.png">
     <hr>
     </header>
 <router-view>
