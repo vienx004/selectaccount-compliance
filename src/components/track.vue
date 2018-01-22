@@ -23,7 +23,25 @@ export default {
           {username:'a0m004', short_desc:'This is short_desc', desc:'This is a long description'},
         ],
     }
-  } 
+  },
+  methods:{
+    fetchTickets(){
+      this.$http.get('https://selectaccount-compliance.firebaseio.com/ticket.json')
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          const ticketArray = [];
+          for(let key in data){
+            ticketArray.push(data[key]);
+          }
+          this.message = (ticketArray);
+        })
+    }
+  },
+  mounted: function(){
+    this.fetchTickets();
+  }
 }
 </script>
 
