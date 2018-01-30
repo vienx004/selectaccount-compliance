@@ -19,7 +19,7 @@
     <hr>
     </header>
 <router-view>
-  <create-component></create-component>
+
 </router-view>
 
   </div>
@@ -68,11 +68,6 @@ a {
   text-align: left;
   padding-left: 5%;
   top: 0;
-}
-
-.submit {
-  text-align: right;
-  padding-right: 15%;
 }
 
 header {
