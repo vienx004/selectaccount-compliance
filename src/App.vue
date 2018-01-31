@@ -2,8 +2,8 @@
   <div id="app">
     <div>
       <b-navbar sticky-top variant="light">
-      <b-navbar-brand class="navbar-brand"><router-link to="/"><img style="height:40%;width:40%;" src="/src/assets/selectaccount-text.png"></router-link></b-navbar-brand>
-
+      <b-navbar-brand class="navbar-brand"><router-link to="/"><img v-bind:src="getPath" style="height:40%;width:40%;"></router-link></b-navbar-brand>
+          <p :brand="brand"></p>
         <b-navbar-nav>
           <span>
             <b-nav-item><router-link class="nav-pills" tag="li" to="/create" exact>Create</router-link></b-nav-item>
@@ -26,11 +26,20 @@
 </template>
 
 <script>
+import HomeComponent from './components/home.vue';
+
 export default {
   name: 'app',
   data () {
     return {
-      message: [{username:'', short_desc:'', desc:''}]
+      message: [{username:'', short_desc:'', desc:''}],
+      brand: 'sa.png',
+      path: 'src/assets/'
+    }
+  },
+  computed: {
+    getPath(){
+      return this.path + 'falcon.png'
     }
   }
 }

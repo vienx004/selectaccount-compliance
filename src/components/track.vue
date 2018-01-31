@@ -14,7 +14,8 @@ export default {
           {key: 'username', sortable: true}, 
           {key: 'short_desc', sortable: false}, 
           {key: 'desc', sortable: false},
-          {key: 'tags', sortable: true}],
+          //{key: 'tags', sortable: true}
+          ],
       styleObj: {
           color: '#53ad3c'
       },
@@ -36,15 +37,6 @@ export default {
           const tagArray = [];
           for(let key in data){
             ticketArray.push(data[key]);
-            if(typeof data[key].tags == "undefined") {
-            }else{
-              for(let index in data[key].tags){
-                tagArray.push(data[key].tags[index].name)
-                ticketArray[index].tags = (tagArray);
-                console.log(ticketArray)
-              }
-            }
-
           }
           this.message = (ticketArray);
         })
