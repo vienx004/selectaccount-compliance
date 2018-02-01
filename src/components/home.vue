@@ -26,27 +26,19 @@
           <p>Knowledge</p>
         </b-col>
       </b-row>
-
-      <b-row class="justify-content-center">
-        <b-col :click="coBrand('falcon.png')" cols="3" class="tile-background">
-          <p>Falcon Brand</p>
-        </b-col>
-        <b-col cols="1"></b-col>
-        <b-col :click="coBrand('sa.png')" cols="3" class="tile-background">
-          <p>SA Brand</p>
-        </b-col>
-      </b-row>
-
     </b-container>
   </div>
 </template>
 
 <script>
+import HeaderComponent from './header.vue'
+
 export default {
+  components: {
+    'app-header': HeaderComponent
+  },
   methods: {
-    coBrand(brandName) {
-      
-    }
+
   }
 }
 </script>

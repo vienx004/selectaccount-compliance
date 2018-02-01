@@ -20,9 +20,7 @@ export default {
           color: '#53ad3c'
       },
       message: [
-          {username:'a0m002', short_desc:'This is short_desc', desc:'This is a long description', tags:[]},
-          {username:'a0m003', short_desc:'This is short_desc', desc:'This is a long description', tags:[]},
-          {username:'a0m004', short_desc:'This is short_desc', desc:'This is a long description', tags:[]},
+
         ],
     }
   },
